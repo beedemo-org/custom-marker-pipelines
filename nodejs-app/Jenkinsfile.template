@@ -12,9 +12,7 @@ pipeline {
         }
       }
     }
-  }
-}
-    stage('Build and Push Image') {
+        stage('Build and Push Image') {
       when {
          beforeAgent true
          branch 'master'
@@ -23,3 +21,5 @@ pipeline {
          echo "TODO - build and push image"
       }
     }
+  }
+}
