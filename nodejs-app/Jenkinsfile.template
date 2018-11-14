@@ -8,6 +8,7 @@ pipeline {
     aborted {
       echo "Why didn't you push my button?"
     }
+  }  
   stages {
     stage('Test') {
       agent { label 'nodejs-app' }
