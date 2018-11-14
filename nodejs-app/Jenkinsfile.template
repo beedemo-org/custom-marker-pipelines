@@ -32,7 +32,7 @@ pipeline {
         timeout(time: 60, unit: 'SECONDS') 
       }
       input {
-        message "Should we deploy?"
+        message "Deploy or pay the consequences?"
         submitter "edgewardo"
         submitterParameter "APPROVER"
       }
