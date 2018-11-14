@@ -37,6 +37,9 @@ pipeline {
         success {
           stash name: 'app', includes: '*.js, public/**, views/*, Dockerfile'
         }
+        always {
+          junit 'res.xml'
+        }
       }
     }
         stage('Build and Push Image') {
@@ -61,7 +64,7 @@ pipeline {
         branch 'master'
       }
         options {
-        timeout(time: 60, unit: 'SECONDS') 
+        timeout(time: 30, unit: 'SECONDS') 
       }
       input {
         message "Deploy or pay the consequences?"
